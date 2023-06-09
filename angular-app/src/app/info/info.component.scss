@@ -1,4 +1,4 @@
-.info-screen {
+.info-container {
   display: flex;
   background-color: #eaf5f8;
   align-content: center;
@@ -9,30 +9,37 @@
     margin-top: 10vh;
   }
 
-  .rule-text, .info-text {
+  .info-text {
     font-size: 2.5vw;
     color: #707070;
     padding-left: 10vw;
   }
 
+  ul {
+    padding-inline-start: 0px;
+    list-style: none;
+  }
+
+
   .start-button {
     color: #707070;
     background-color: #a6d7ed;
     display: flex;
-    width: 15vw;
+    width: 100%;
     margin: 0 auto;
     margin-top: 80px;
     font-size: 2vw;
+    max-width: 200px;
   }
 
   @media (max-width: 600px) {
-    .rule-text, .info-text {
+    .info-text {
       font-size: 4vw;
       padding: 4%;
     }
     .start-button {
       width: 200px;
-      margin-top: 300px;
+      margin-top: 10vh;
     }
   }
 }
