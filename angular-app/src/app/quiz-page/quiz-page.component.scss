@@ -1,0 +1,30 @@
+.wrapper {
+  background-color: #eaf5f8;
+  height: 100%;
+
+  .quiz-content {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    padding: 5vh 5vw;
+    margin: 10px 10px;
+  }
+
+  .imgData-content {
+    background-color: #f7f7f7;
+    height: 50vh;
+    margin: 5%;
+  }
+
+  .selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .sl-btn {
+    background-color: #a6d7ed;
+    width: 40%;
+  }
+}
