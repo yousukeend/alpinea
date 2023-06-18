@@ -46,7 +46,8 @@
   @media screen and (max-width: 450px){
     .selection {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
     }
   }
 }
