@@ -1,19 +1,30 @@
 .wrapper {
   background-color: #eaf5f8;
   height: 100%;
+  padding-top: 5%;
 
   .quiz-content {
     background-color: #f7f7f7;
     border-radius: 5px;
     border: 1px solid #707070;
-    padding: 5vh 5vw;
-    margin: 10px 10px;
+    text-align: center;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+
+    .quiz-text {
+      padding: 2% 2%;
+    }
   }
 
   .imgData-content {
     background-color: #f7f7f7;
-    height: 50vh;
+    height: 45vh;
+    width: 80vw;
     margin: 5%;
+    max-width: 960px;
+    margin: 0 auto;
   }
 
   .selection {
@@ -21,10 +32,22 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
+    padding: 4% 10%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    .sl-btn {
+      background-color: #a6d7ed;
+      width: 100%;
+      height: 60px;
+    }
   }
 
-  .sl-btn {
-    background-color: #a6d7ed;
-    width: 40%;
+  @media screen and (max-width: 450px){
+    .selection {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
   }
 }
