@@ -10,6 +10,7 @@ import { InfoComponent } from './info/info.component';
 import {MatButtonModule} from '@angular/material/button';
 import { QuizPageComponent } from './quiz-page/quiz-page.component';
 import { JudgmentComponent } from './judgment/judgment.component';
+import { ResultComponent } from './result/result.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { JudgmentComponent } from './judgment/judgment.component';
     TopComponent,
     InfoComponent,
     QuizPageComponent,
-    JudgmentComponent
+    JudgmentComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
