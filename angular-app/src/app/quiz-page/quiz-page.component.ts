@@ -12,6 +12,6 @@ export class QuizPageComponent {
   trustUrl: SafeResourceUrl;
 
   constructor(private sanitizer: DomSanitizer){
-    this.trustUrl = sanitizer.bypassSecurityTrustResourceUrl(this.data[0].quizImg);
+    this.trustUrl = sanitizer.bypassSecurityTrustResourceUrl(this.data[1].quizImg);
   }
 }
