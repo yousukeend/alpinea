@@ -1,15 +1,20 @@
 <div class="wrapper">
   <div class="quiz-content">
-    <p class="quiz-text">問題１：ここはどこでしょう？</p>
+
+    <p  class="quiz-text">問題１：{{ data[0].quizText }}</p>
+
   </div>
   <div class="imgData-content">
-    <p>動画・写真を挟む 比率16:9にする</p>
+    <!-- 画像テスト -->
+    <iframe class="imgData-source" [src]="trustUrl" allow="autoplay"></iframe>
+    <!-- 動画テスト -->
+    <!-- <iframe class="imgData-source" src="https://drive.google.com/file/d/1SVOnvWsQjx6tsNnxLdxycPPWu-O3ClBj/preview" allow="autoplay"></iframe> -->
   </div>
 
   <div class="selection">
-    <button mat-flat-button class="sl-btn">月山</button>
-    <button mat-flat-button class="sl-btn">安比高原</button>
-    <button mat-flat-button class="sl-btn">志賀高原</button>
-    <button mat-flat-button class="sl-btn">山形蔵王</button>
+    <button mat-flat-button class="sl-btn">{{ data[0].ansOptions[0] }}</button>
+    <button mat-flat-button class="sl-btn">{{ data[0].ansOptions[1] }}</button>
+    <button mat-flat-button class="sl-btn">{{ data[0].ansOptions[2] }}</button>
+    <button mat-flat-button class="sl-btn">{{ data[0].ansOptions[3] }}</button>
   </div>
 </div>
