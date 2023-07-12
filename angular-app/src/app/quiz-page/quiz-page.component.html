@@ -1,20 +1,20 @@
 <div class="wrapper">
   <div class="quiz-content">
 
-    <p  class="quiz-text">問題１：{{ data[0].quizText }}</p>
+    <p  class="quiz-text">問題１：{{ data[1].quizText }}</p>
 
   </div>
   <div class="imgData-content">
     <!-- 画像テスト -->
-    <iframe class="imgData-source" [src]="trustUrl" allow="autoplay"></iframe>
+    <!-- <iframe class="imgData-source" [src]="trustUrl" allow="autoplay"></iframe> -->
     <!-- 動画テスト -->
-    <!-- <iframe class="imgData-source" src="https://drive.google.com/file/d/1SVOnvWsQjx6tsNnxLdxycPPWu-O3ClBj/preview" allow="autoplay"></iframe> -->
+    <iframe class="imgData-source" [src]="trustUrl" allow="autoplay"></iframe>
   </div>
 
   <div class="selection">
-    <button mat-flat-button class="sl-btn">{{ data[0].ansOptions[0] }}</button>
-    <button mat-flat-button class="sl-btn">{{ data[0].ansOptions[1] }}</button>
-    <button mat-flat-button class="sl-btn">{{ data[0].ansOptions[2] }}</button>
-    <button mat-flat-button class="sl-btn">{{ data[0].ansOptions[3] }}</button>
+    <button mat-flat-button class="sl-btn">{{ data[1].ansOptions[0] }}</button>
+    <button mat-flat-button class="sl-btn">{{ data[1].ansOptions[1] }}</button>
+    <button mat-flat-button class="sl-btn">{{ data[1].ansOptions[2] }}</button>
+    <button mat-flat-button class="sl-btn">{{ data[1].ansOptions[3] }}</button>
   </div>
 </div>
