@@ -18,5 +18,4 @@ export class QuizPageComponent {
       this.quizList[1].quizImg
     );
   }
-  }
 }
