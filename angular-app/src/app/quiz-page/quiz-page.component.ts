@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DATA } from '../dataContent';
+import { QUIZ_LIST } from '../const';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -8,10 +8,15 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./quiz-page.component.scss']
 })
 export class QuizPageComponent {
-  data = DATA;
+  quizList = QUIZ_LIST;
   trustUrl: SafeResourceUrl;
 
-  constructor(private sanitizer: DomSanitizer){
-    this.trustUrl = sanitizer.bypassSecurityTrustResourceUrl(this.data[1].quizImg);
+  constructor(
+    private sanitizer: DomSanitizer,
+  ) {
+    this.trustUrl = sanitizer.bypassSecurityTrustResourceUrl(
+      this.quizList[1].quizImg
+    );
+  }
   }
 }

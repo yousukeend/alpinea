@@ -1,20 +1,26 @@
 <div class="wrapper">
   <div class="quiz-content">
-
-    <p  class="quiz-text">問題１：{{ data[1].quizText }}</p>
-
+    <p class="quiz-text">問題１：{{ quizList[1].quizText }}</p>
   </div>
-  <div class="imgData-content">
+  <div class="quiz-image-content">
     <!-- 画像テスト -->
     <!-- <iframe class="imgData-source" [src]="trustUrl" allow="autoplay"></iframe> -->
     <!-- 動画テスト -->
-    <iframe class="imgData-source" [src]="trustUrl" allow="autoplay"></iframe>
+    <iframe class="quiz-image-frame" [src]="trustUrl" allow="autoplay"></iframe>
   </div>
 
   <div class="selection">
-    <button mat-flat-button class="sl-btn" routerLink="/judge">{{ data[1].ansOptions[0] }}</button>
-    <button mat-flat-button class="sl-btn" routerLink="/judge">{{ data[1].ansOptions[1] }}</button>
-    <button mat-flat-button class="sl-btn" routerLink="/judge">{{ data[1].ansOptions[2] }}</button>
-    <button mat-flat-button class="sl-btn" routerLink="/judge">{{ data[1].ansOptions[3] }}</button>
+    <button mat-flat-button class="sl-btn" routerLink="/judge">
+      {{ quizList[1].ansOptions[0] }}
+    </button>
+    <button mat-flat-button class="sl-btn" routerLink="/judge">
+      {{ quizList[1].ansOptions[1] }}
+    </button>
+    <button mat-flat-button class="sl-btn" routerLink="/judge">
+      {{ quizList[1].ansOptions[2] }}
+    </button>
+    <button mat-flat-button class="sl-btn" routerLink="/judge">
+      {{ quizList[1].ansOptions[3] }}
+    </button>
   </div>
 </div>
