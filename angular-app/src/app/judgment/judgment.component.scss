@@ -16,7 +16,7 @@
 
   .flex {
     display: flex;
-    margin-top:4%;
+    margin-top: 4%;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
@@ -33,6 +33,7 @@
       .ans-word {
         background-color: #f7f7f7;
         border: 1px solid #707070;
+        padding: 5px;
         margin: 4%;
       }
 
@@ -40,6 +41,7 @@
         background-color: #f7f7f7;
         border: 1px solid #707070;
         height: 50%;
+        padding: 5px;
         margin: 4%;
       }
     }
@@ -47,6 +49,11 @@
     .answer-img {
       width: 50%;
       background-color: #f7f7f7;
+
+      .quiz-image-frame {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
