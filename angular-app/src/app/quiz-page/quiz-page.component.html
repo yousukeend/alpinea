@@ -8,19 +8,14 @@
     <!-- 動画テスト -->
     <iframe class="quiz-image-frame" [src]="trustUrl" allow="autoplay"></iframe>
   </div>
-
   <div class="selection">
-    <button mat-flat-button class="sl-btn" routerLink="/judge">
-      {{ quizList[1].ansOptions[0] }}
-    </button>
-    <button mat-flat-button class="sl-btn" routerLink="/judge">
-      {{ quizList[1].ansOptions[1] }}
-    </button>
-    <button mat-flat-button class="sl-btn" routerLink="/judge">
-      {{ quizList[1].ansOptions[2] }}
-    </button>
-    <button mat-flat-button class="sl-btn" routerLink="/judge">
-      {{ quizList[1].ansOptions[3] }}
+    <button
+      mat-flat-button
+      class="sl-btn"
+      *ngFor="let ansOption of quizList[1].ansOptions"
+      (click)="onSelected(ansOption)"
+    >
+      {{ ansOption }}
     </button>
   </div>
 </div>
