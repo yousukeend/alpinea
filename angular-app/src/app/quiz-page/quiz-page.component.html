@@ -13,7 +13,7 @@
       mat-flat-button
       class="sl-btn"
       *ngFor="let ansOption of quizList[1].ansOptions"
-      (click)="onSelected(ansOption)"
+      (click)="onClickAnswer(ansOption)"
     >
       {{ ansOption }}
     </button>

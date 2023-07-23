@@ -24,7 +24,7 @@ export class QuizPageComponent {
     );
   }
 
-  onSelected(ans: string) {
+  onClickAnswer(ans: string) {
     this.judgement.setJudgeAns(ans === this.quizList[1].ansWord);
     this.router.navigateByUrl('/judge');
   }
