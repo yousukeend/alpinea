@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class JudgementService {
-  judgeAns: boolean = false;
+  isCorrectAnswer: boolean = false;
 
   constructor() {}
 
   setJudgeAns(ans: boolean) {
-    this.judgeAns = ans;
+    this.isCorrectAnswer = ans;
   }
 }
