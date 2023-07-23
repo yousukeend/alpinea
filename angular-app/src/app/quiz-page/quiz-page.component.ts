@@ -24,8 +24,8 @@ export class QuizPageComponent {
     );
   }
 
-  onClickAnswer(ans: string) {
-    this.judgement.setJudgeAns(ans === this.quizList[1].ansWord);
+  onClickAnswer(ans: number) {
+    this.judgement.setJudgeAns(ans === 0);
     this.router.navigateByUrl('/judge');
   }
 }

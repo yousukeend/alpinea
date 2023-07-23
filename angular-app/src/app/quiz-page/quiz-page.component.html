@@ -12,8 +12,8 @@
     <button
       mat-flat-button
       class="sl-btn"
-      *ngFor="let ansOption of quizList[1].ansOptions"
-      (click)="onClickAnswer(ansOption)"
+      *ngFor="let ansOption of quizList[1].ansOptions; index as i"
+      (click)="onClickAnswer(i)"
     >
       {{ ansOption }}
     </button>
