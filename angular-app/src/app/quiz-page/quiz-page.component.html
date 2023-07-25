@@ -1,18 +1,22 @@
 <div class="wrapper">
   <div class="quiz-content">
-    <p class="quiz-text">問題１：{{ quizList[1].quizText }}</p>
+    <p class="quiz-text">
+      問題 {{ quizCount }} :
+      {{ judgement.randomQuizList[judgement.randomQuizCount].quizText }}
+    </p>
   </div>
   <div class="quiz-image-content">
-    <!-- 画像テスト -->
-    <!-- <iframe class="imgData-source" [src]="trustUrl" allow="autoplay"></iframe> -->
-    <!-- 動画テスト -->
     <iframe class="quiz-image-frame" [src]="trustUrl" allow="autoplay"></iframe>
   </div>
   <div class="selection">
     <button
       mat-flat-button
       class="sl-btn"
-      *ngFor="let ansOption of quizList[1].ansOptions; index as i"
+      *ngFor="
+        let ansOption of judgement.randomQuizList[judgement.randomQuizCount]
+          .ansOptions;
+        index as i
+      "
       (click)="onClickAnswer(i)"
     >
       {{ ansOption }}

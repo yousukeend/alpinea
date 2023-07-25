@@ -6,9 +6,11 @@
     <div class="answer-content">
       <div class="ans-word">
         <p>{{ quizList[1].ansWord }}</p>
+        <!-- {{ judgement.randomQuizList[judgement.randomQuizCount].ansWord }} -->
       </div>
       <div class="ans-exp">
         <p>{{ quizList[1].ansExp }}</p>
+        <!-- {{ judgement.randomQuizList[judgement.randomQuizCount].ansExp }} -->
       </div>
     </div>
     <div class="answer-img">
@@ -19,5 +21,5 @@
       ></iframe>
     </div>
   </div>
-  <button mat-fab extended class="next-btn">次へ</button>
+  <button mat-fab extended class="next-btn" (click)="nextQuiz()">次へ</button>
 </div>
