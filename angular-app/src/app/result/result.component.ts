@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { JudgementService } from '../judgement.service';
+import { QuizService } from '../quiz.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,10 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./result.component.scss'],
 })
 export class ResultComponent {
-  constructor(public judgement: JudgementService, private router: Router) {}
+  constructor(
+    public judgementService: JudgementService,
+    public QuizService: QuizService,
+    private router: Router
+  ) {}
 
   restart() {
-    this.judgement.initQuiz();
+    this.judgementService.initQuiz();
+    this.QuizService.initQuiz();
     this.router.navigateByUrl('/');
   }
 }

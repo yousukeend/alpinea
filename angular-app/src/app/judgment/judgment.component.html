@@ -1,16 +1,16 @@
 <div class="wrapper">
   <div class="judgement">
-    <p>{{ judgement.isCorrectAnswer ? "正解" : "不正解" }}</p>
+    <p>{{ judgementService.isCorrectAnswer ? "正解" : "不正解" }}</p>
   </div>
   <div class="flex">
     <div class="answer-content">
       <div class="ans-word">
-        <p>{{ quizList[1].ansWord }}</p>
-        <!-- {{ judgement.randomQuizList[judgement.randomQuizCount].ansWord }} -->
+        <!-- <p>{{ quizList[1].ansWord }}</p> -->
+        {{ quizService.randomQuizList[quizService.randomQuizCount].ansWord }}
       </div>
       <div class="ans-exp">
-        <p>{{ quizList[1].ansExp }}</p>
-        <!-- {{ judgement.randomQuizList[judgement.randomQuizCount].ansExp }} -->
+        <!-- <p>{{ quizList[1].ansExp }}</p> -->
+        {{ quizService.randomQuizList[quizService.randomQuizCount].ansExp }}
       </div>
     </div>
     <div class="answer-img">

@@ -1,8 +1,8 @@
 <div class="wrapper">
   <div class="quiz-content">
     <p class="quiz-text">
-      問題 {{ quizCount }} :
-      {{ judgement.randomQuizList[judgement.randomQuizCount].quizText }}
+      問題 {{ judgementService.quizCount }} :
+      {{ quizService.randomQuizList[quizService.randomQuizCount].quizText }}
     </p>
   </div>
   <div class="quiz-image-content">
@@ -12,12 +12,8 @@
     <button
       mat-flat-button
       class="sl-btn"
-      *ngFor="
-        let ansOption of judgement.randomQuizList[judgement.randomQuizCount]
-          .ansOptions;
-        index as i
-      "
-      (click)="onClickAnswer(i)"
+      *ngFor="let ansOption of randomQuizList; index as i"
+      (click)="onClickAnswer(ansOption)"
     >
       {{ ansOption }}
     </button>
