@@ -22,6 +22,10 @@ export class JudgementService {
     this.isCorrectAnswer = ans;
   }
 
+  getQuizCount(): number {
+    return this.quizCount;
+  }
+
   nextQuiz() {
     if (this.quizCount < 7) {
       this.quizCount += 1;
@@ -30,5 +34,15 @@ export class JudgementService {
     } else {
       this.router.navigateByUrl('/result');
     }
+  }
+
+  //進行中の問題番号
+  get quizCurrentCount(): number {
+    return this.quizCount;
+  }
+
+  //正誤判定の取得
+  get quizCorrectAnswer(): boolean {
+    return this.isCorrectAnswer;
   }
 }

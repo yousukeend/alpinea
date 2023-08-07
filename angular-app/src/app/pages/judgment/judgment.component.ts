@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { QUIZ_LIST } from '../const';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { JudgementService } from '../judgement.service';
-import { Router } from '@angular/router';
-import { QuizService } from '../quiz.service';
+import { JudgementService } from '../../services/judgement.service';
+import { QuizService } from '../../services/quiz.service';
 
 @Component({
   selector: 'app-judgment',
@@ -11,21 +9,28 @@ import { QuizService } from '../quiz.service';
   styleUrls: ['./judgment.component.scss'],
 })
 export class JudgmentComponent implements OnInit {
-  quizList = QUIZ_LIST;
   trustUrl: SafeResourceUrl = '';
+  correctAnswer?: boolean;
+  answerWord?: string;
+  answerExplanation?: string;
 
   constructor(
     private sanitizer: DomSanitizer,
-    private router: Router,
     public judgementService: JudgementService,
     public quizService: QuizService
   ) {}
+
   ngOnInit(): void {
+    this.correctAnswer = this.judgementService.quizCorrectAnswer;
+    this.answerWord = this.quizService.answerWord;
+    this.answerExplanation = this.quizService.answerExplanation;
+
     this.trustUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
       this.quizService.randomQuizList[this.quizService.randomQuizCount].ansImg
     );
   }
 
+  //ここも検討する
   nextQuiz() {
     this.judgementService.nextQuiz();
   }
