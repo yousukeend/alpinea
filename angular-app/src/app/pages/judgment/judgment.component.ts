@@ -30,7 +30,6 @@ export class JudgmentComponent implements OnInit {
     );
   }
 
-  //ここも検討する
   nextQuiz() {
     this.judgementService.nextQuiz();
   }

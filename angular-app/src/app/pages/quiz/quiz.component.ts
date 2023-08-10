@@ -3,6 +3,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { JudgementService } from '../../services/judgement.service';
 import { QuizService } from '../../services/quiz.service';
+import { AnsOption } from 'src/app/types';
 
 import * as _ from 'lodash';
 
@@ -15,7 +16,7 @@ export class QuizComponent implements OnInit {
   quizCount?: number;
   currentQuizText?: string;
   trustUrl: SafeResourceUrl = '';
-  randomChoice: string[] = [];
+  randomChoice: AnsOption[] = [];
 
   constructor(
     private sanitizer: DomSanitizer,
@@ -39,17 +40,8 @@ export class QuizComponent implements OnInit {
     );
   }
 
-  onClickAnswer(ans: number) {
-    this.judgementService.setJudgeAns(ans === 0);
+  onClickAnswer(isCorrect: boolean) {
+    this.judgementService.setJudgeAns(isCorrect);
     this.router.navigateByUrl('/judge');
   }
-
-  // onClickAnswer(ans: string) {
-  //   this.judgementService.setJudgeAns(
-  //     ans ===
-  //       this.quizService.randomQuizList[this.quizService.randomQuizCount]
-  //         .ansWord
-  //   );
-  //   this.router.navigateByUrl('/judge');
-  // }
 }

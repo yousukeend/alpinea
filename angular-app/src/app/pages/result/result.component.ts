@@ -15,9 +15,8 @@ export class ResultComponent {
     private router: Router
   ) {}
 
+  //最初からクイズをスタートさせる
   restart() {
-    this.judgementService.initQuiz();
-    this.QuizService.initQuiz();
     this.router.navigateByUrl('/');
   }
 }

@@ -14,8 +14,10 @@ export class QuizService {
 
   constructor() {}
 
+  //出題する配列の初期化
   initQuiz() {
     this.randomQuizList = [];
+    this.randomQuizCount = 0;
   }
 
   //クイズが開始時に一回だけ実行する

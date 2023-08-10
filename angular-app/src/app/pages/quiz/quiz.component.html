@@ -13,9 +13,9 @@
       mat-flat-button
       class="sl-btn"
       *ngFor="let ansOption of randomChoice; index as i"
-      (click)="onClickAnswer(i)"
+      (click)="onClickAnswer(ansOption.isCorrect)"
     >
-      {{ ansOption }}
+      {{ ansOption.label }}
     </button>
   </div>
 </div>

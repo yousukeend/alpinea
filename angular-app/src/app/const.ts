@@ -5,7 +5,12 @@ export const QUIZ_LIST: Quiz[] = [
     quizText: '後ろに見える山は何でしょう?',
     quizImg:
       'https://drive.google.com/file/d/14ZKtwNlNXahxMutSJW_paBAxvvoim0qw/preview',
-    ansOptions: ['岩手山', '蔵王山', '大雪山', '安達太良山'],
+    ansOptions: [
+      { label: '岩手山', isCorrect: true },
+      { label: '蔵王山', isCorrect: false },
+      { label: '大雪山', isCorrect: false },
+      { label: '安達太良山', isCorrect: false },
+    ],
     ansWord: '岩手山',
     ansExp:
       '岩手山は日本百名山に選定されており、標高2,038mの成層火山です。冬になれば綺麗な雪山を見ることができます。',
@@ -17,10 +22,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1wj34phlrTKWtEBUw21U_-9D85HA0Uyl0/preview',
     ansOptions: [
-      'ショートターン',
-      'ロングターン',
-      'ミドルターン',
-      'ミニマムターン',
+      { label: 'ショートターン', isCorrect: true },
+      { label: 'ロングターン', isCorrect: false },
+      { label: 'ミドルターン', isCorrect: false },
+      { label: 'ミニマムターン', isCorrect: false },
     ],
     ansWord: 'ショートターン',
     ansExp:
@@ -33,10 +38,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1J4VH8CgXp2SE3n9_O1LjA0BwG55tdo9p/preview',
     ansOptions: [
-      '白石スキー場',
-      '猫魔スキー場',
-      '安比高原スキー場',
-      'サッポロテイネ',
+      { label: '白石スキー場', isCorrect: true },
+      { label: '猫魔スキー場', isCorrect: false },
+      { label: '安比高原スキー場', isCorrect: false },
+      { label: 'サッポロテイネ', isCorrect: false },
     ],
     ansWord: '白石スキー場',
     ansExp:
@@ -49,10 +54,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1LD7_LJq0xsQeoBbr_jA-MmtNiR7g5DXl/preview',
     ansOptions: [
-      '猫魔スキー場',
-      '白石スキー場',
-      '猪苗代スキー場',
-      'オニコウベスキー場',
+      { label: '猫魔スキー場', isCorrect: true },
+      { label: '白石スキー場', isCorrect: false },
+      { label: '猪苗代スキー場', isCorrect: false },
+      { label: 'オニコウベスキー場', isCorrect: false },
     ],
     ansWord: '猫魔スキー場',
     ansExp:
@@ -65,10 +70,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1HAedJRzgbYD4Qcg44HHygkw-PH-Q3Wbc/preview',
     ansOptions: [
-      'マウントレースイスキー場',
-      '富良野スキー場',
-      '札幌国際スキー場',
-      'サッポロテイネ',
+      { label: 'マウントレースイスキー場', isCorrect: true },
+      { label: '富良野スキー場', isCorrect: false },
+      { label: '札幌国際スキー場', isCorrect: false },
+      { label: 'サッポロテイネ', isCorrect: false },
     ],
     ansWord: 'マウントレースイスキー場',
     ansExp:
@@ -81,10 +86,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1-yzin6eKwtYEikwUZO1sMVoSwaxqLhV7/preview',
     ansOptions: [
-      'ルスツリゾートスキー場',
-      '富良野スキー場',
-      '札幌国際スキー場',
-      'マウントレースイスキー場',
+      { label: 'ルスツリゾートスキー場', isCorrect: true },
+      { label: '富良野スキー場', isCorrect: false },
+      { label: '札幌国際スキー場', isCorrect: false },
+      { label: 'マウントレースイスキー場', isCorrect: false },
     ],
     ansWord: 'ルスツリゾートスキー場',
     ansExp:
@@ -96,7 +101,12 @@ export const QUIZ_LIST: Quiz[] = [
     quizText: '初心者に何を教えているでしょう？',
     quizImg:
       'https://drive.google.com/file/d/1p-F5w2FO6yuhQxFGce1t5pPLKS1hv9J4/preview',
-    ansOptions: ['安全に止まる方法', '転び方', 'スピードの出し方', '曲がり方'],
+    ansOptions: [
+      { label: '安全に止まる方法', isCorrect: true },
+      { label: '転び方', isCorrect: false },
+      { label: 'スピードの出し方', isCorrect: false },
+      { label: '曲がり方', isCorrect: false },
+    ],
     ansWord: '安全に止まる方法',
     ansExp:
       '安全が第一なので、まずはしっかり止まれるように教えています。慣れてきたら徐々に曲がる練習を教える方法をとっています。',
@@ -107,7 +117,12 @@ export const QUIZ_LIST: Quiz[] = [
     quizText: 'この山は何でしょう？',
     quizImg:
       'https://drive.google.com/file/d/1Te8tcNq0AigvuInW9D_G-jfXv3RgBjeK/preview',
-    ansOptions: ['安達太良山', '蔵王山', '大雪山', '鳥海山'],
+    ansOptions: [
+      { label: '安達太良山', isCorrect: true },
+      { label: '蔵王山', isCorrect: false },
+      { label: '大雪山', isCorrect: false },
+      { label: '鳥海山', isCorrect: false },
+    ],
     ansWord: '安達太良山',
     ansExp:
       '安達太良山は日本百名山に選定されており、標高1,728mあります。冬になれば樹氷も見ることができます。',
@@ -119,10 +134,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1y7hwOQCFHTdqCxjaxNgVZ_DcwHcNx58J/preview',
     ansOptions: [
-      'クワッドリフト',
-      'ペアリフト',
-      'トリプルリフト',
-      'ダブルダブルリフト',
+      { label: 'クワッドリフト', isCorrect: true },
+      { label: 'ペアリフト', isCorrect: false },
+      { label: 'トリプルリフト', isCorrect: false },
+      { label: 'ダブルダブルリフト', isCorrect: false },
     ],
     ansWord: 'クワッドリフト',
     ansExp:
@@ -135,10 +150,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1SVOnvWsQjx6tsNnxLdxycPPWu-O3ClBj/preview',
     ansOptions: [
-      '山形蔵王温泉スキー場',
-      '野沢温泉スキー場',
-      '夏油高原スキー場',
-      '猪苗代スキー場',
+      { label: '山形蔵王温泉スキー場', isCorrect: true },
+      { label: '野沢温泉スキー場', isCorrect: false },
+      { label: '夏油高原スキー場', isCorrect: false },
+      { label: '猪苗代スキー場', isCorrect: false },
     ],
     ansWord: '山形蔵王温泉スキー場',
     ansExp:
@@ -151,10 +166,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1PGrJW1VFr2OcuNjvfZJfiKEuP_CTwzse/preview',
     ansOptions: [
-      'ビッテリーターン',
-      'バッテリーターン',
-      'チャールストン',
-      'ウェーデルン',
+      { label: 'ビッテリーターン', isCorrect: true },
+      { label: 'バッテリーターン', isCorrect: false },
+      { label: 'チャールストン', isCorrect: false },
+      { label: 'ウェーデルン', isCorrect: false },
     ],
     ansWord: 'ビッテリーターン',
     ansExp:
@@ -167,10 +182,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1XgthniJH13AhGlEwUr_cPsRpeasu59wl/preview',
     ansOptions: [
-      'ロングターン',
-      'ミドルターン',
-      'ショートターン',
-      'ミニマムターン',
+      { label: 'ロングターン', isCorrect: true },
+      { label: 'ミドルターン', isCorrect: false },
+      { label: 'ショートターン', isCorrect: false },
+      { label: 'ミニマムターン', isCorrect: false },
     ],
     ansWord: 'ロングターン',
     ansExp:
@@ -183,10 +198,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1HkvuaYKtr0Hjk8Z2AFYBV1cytLPcijC1/preview',
     ansOptions: [
-      'チャールストン',
-      'ドルフィンターン',
-      'ノルウェーターン',
-      'スウェーデンターン',
+      { label: 'チャールストン', isCorrect: true },
+      { label: 'ドルフィンターン', isCorrect: false },
+      { label: 'ノルウェーターン', isCorrect: false },
+      { label: 'スウェーデンターン', isCorrect: false },
     ],
     ansWord: 'チャールストン',
     ansExp:
@@ -199,10 +214,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1zCdtyjZxlbPXVJ8FlgHMOSgEbt5eF6nY/preview',
     ansOptions: [
-      'ドルフィンターン',
-      'チャールストン',
-      'ノルウェーターン',
-      'スウェーデンターン',
+      { label: 'ドルフィンターン', isCorrect: true },
+      { label: 'チャールストン', isCorrect: false },
+      { label: 'ノルウェーターン', isCorrect: false },
+      { label: 'スウェーデンターン', isCorrect: false },
     ],
     ansWord: 'ドルフィンターン',
     ansExp:
@@ -215,10 +230,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1wkBwe1W7ZTT9nT3Faw1npjPCgmYaOfLC/preview',
     ansOptions: [
-      'ノルウェーターン',
-      'スウェーデンターン',
-      'チャールストン',
-      'スイスターン',
+      { label: 'ノルウェーターン', isCorrect: true },
+      { label: 'スウェーデンターン', isCorrect: false },
+      { label: 'チャールストン', isCorrect: false },
+      { label: 'スイスターン', isCorrect: false },
     ],
     ansWord: 'ノルウェーターン',
     ansExp:
@@ -231,10 +246,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1wFx-EOY9ZdWwo-YMVwaIooEGId4J-qb4/preview',
     ansOptions: [
-      'スウェーデンターン',
-      'スイスターン',
-      'チャールストン',
-      'デンマークターン',
+      { label: 'スウェーデンターン', isCorrect: true },
+      { label: 'スイスターン', isCorrect: false },
+      { label: 'チャールストン', isCorrect: false },
+      { label: 'デンマークターン', isCorrect: false },
     ],
     ansWord: 'スウェーデンターン',
     ansExp:
@@ -246,7 +261,12 @@ export const QUIZ_LIST: Quiz[] = [
     quizText: 'ここはどこでしょう？',
     quizImg:
       'https://drive.google.com/file/d/1TK8RNtL_N_CRvM1451ZYN05lq6_474Rs/preview',
-    ansOptions: ['月山', '鳥海山', '蔵王山', '岩手山'],
+    ansOptions: [
+      { label: '月山', isCorrect: true },
+      { label: '鳥海山', isCorrect: false },
+      { label: '蔵王山', isCorrect: false },
+      { label: '岩手山', isCorrect: false },
+    ],
     ansWord: '月山',
     ansExp:
       '月山は日本百名山に選定されており、標高1,984mあります。冬は降雪量が多すぎるため、サマースキー場として多くの人に知られています。',
@@ -258,10 +278,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1_gdxbttqkTxEG1EuBorObg7Jss7upPOA/preview',
     ansOptions: [
-      'シュテムターン',
-      'プルークボーゲン',
-      'アルプスターン',
-      'ステップターン',
+      { label: 'シュテムターン', isCorrect: true },
+      { label: 'プルークボーゲン', isCorrect: false },
+      { label: 'アルプスターン', isCorrect: false },
+      { label: 'ステップターン', isCorrect: false },
     ],
     ansWord: 'シュテムターン',
     ansExp:
@@ -274,10 +294,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1HIZlrs51PMtB6S0mMbbmU5CO1yITbcoU/preview',
     ansOptions: [
-      'プルークボーゲン',
-      'シュテムターン',
-      'ステップターン',
-      'オープンターン',
+      { label: 'プルークボーゲン', isCorrect: true },
+      { label: 'シュテムターン', isCorrect: false },
+      { label: 'ステップターン', isCorrect: false },
+      { label: 'オープンターン', isCorrect: false },
     ],
     ansWord: 'プルークボーゲン',
     ansExp:
@@ -290,10 +310,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/1bqmw3MbbClFHsHZfBcP4D8uBWP6OERdl/preview',
     ansOptions: [
-      '安比高原スキー場',
-      '志賀高原スキー場',
-      '山形蔵王温泉スキー場',
-      '夏油高原スキー場',
+      { label: '安比高原スキー場', isCorrect: true },
+      { label: '志賀高原スキー場', isCorrect: false },
+      { label: '山形蔵王温泉スキー場', isCorrect: false },
+      { label: '夏油高原スキー場', isCorrect: false },
     ],
     ansWord: '安比高原スキー場',
     ansExp:
@@ -306,10 +326,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/14OdhrruhSi_Fhb9xBLQ2vG5I9Y3rPFrk/preview',
     ansOptions: [
-      'ジャイアントスラローム',
-      'スラローム',
-      'モーグル',
-      'ダウンヒル',
+      { label: 'ジャイアントスラローム', isCorrect: true },
+      { label: 'スラローム', isCorrect: false },
+      { label: 'モーグル', isCorrect: false },
+      { label: 'ダウンヒル', isCorrect: false },
     ],
     ansWord: 'ジャイアントスラローム',
     ansExp:
@@ -321,7 +341,12 @@ export const QUIZ_LIST: Quiz[] = [
     quizText: 'このエリアはどこでしょう？',
     quizImg:
       'https://drive.google.com/file/d/1TDCpbnlAc3ANcQPbWKxFhIcE2sfydHS2/preview',
-    ansOptions: ['志賀高原', 'ニセコ', '白馬', '山形蔵王'],
+    ansOptions: [
+      { label: '志賀高原', isCorrect: true },
+      { label: 'ニセコ', isCorrect: false },
+      { label: '白馬', isCorrect: false },
+      { label: '山形蔵王', isCorrect: false },
+    ],
     ansWord: '志賀高原',
     ansExp:
       '志賀高原は長野県北東に位置し、標高1,500~2,000mあります。近くに地獄谷野猿公苑があり、猿を見かけることができます。',
@@ -333,10 +358,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/14bo22ixUC7UHpLFAAMhsN0vgIna9ojW8/preview',
     ansOptions: [
-      'サッポロテイネ',
-      '札幌国際スキー場',
-      '猪苗代スキー場',
-      'ガーラ湯沢スキー場',
+      { label: 'サッポロテイネ', isCorrect: true },
+      { label: '札幌国際スキー場', isCorrect: false },
+      { label: '猪苗代スキー場', isCorrect: false },
+      { label: 'ガーラ湯沢スキー場', isCorrect: false },
     ],
     ansWord: 'サッポロテイネ',
     ansExp:
@@ -349,10 +374,10 @@ export const QUIZ_LIST: Quiz[] = [
     quizImg:
       'https://drive.google.com/file/d/15F4RKDRwr9Ae-gNvqCqgRfbVewp1Ze3P/preview',
     ansOptions: [
-      'カムイスキーリンクス',
-      '札幌国際スキー場',
-      'ニセコ',
-      '野沢温泉スキー場',
+      { label: 'カムイスキーリンクス', isCorrect: true },
+      { label: '札幌国際スキー場', isCorrect: false },
+      { label: 'ニセコ', isCorrect: false },
+      { label: '野沢温泉スキー場', isCorrect: false },
     ],
     ansWord: 'カムイスキーリンクス',
     ansExp:
