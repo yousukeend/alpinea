@@ -3,7 +3,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { JudgementService } from '../../services/judgement.service';
 import { QuizService } from '../../services/quiz.service';
-import { AnsOption } from 'src/app/types';
+import { AnsOption, Quiz } from 'src/app/types';
 
 import * as _ from 'lodash';
 
@@ -22,22 +22,19 @@ export class QuizComponent implements OnInit {
     private sanitizer: DomSanitizer,
     private router: Router,
     private judgementService: JudgementService,
-    public quizService: QuizService
+    private quizService: QuizService
   ) {}
 
   ngOnInit(): void {
-    this.quizCount = this.judgementService.getQuizCount();
+    this.quizCount = this.quizService.quizCount + 1;
     this.currentQuizText = this.quizService.currentQuizText;
 
     this.trustUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-      this.quizService.randomQuizList[this.quizService.randomQuizCount].quizImg
+      this.quizService.currentQuizImg
     );
 
     //クイズ出題されたとき、選択肢をランダム処理をさせる
-    this.randomChoice = _.shuffle(
-      this.quizService.randomQuizList[this.quizService.randomQuizCount]
-        .ansOptions
-    );
+    this.randomChoice = _.shuffle(this.quizService.currentAnsOptions);
   }
 
   onClickAnswer(isCorrect: boolean) {

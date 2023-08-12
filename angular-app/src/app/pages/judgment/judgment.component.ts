@@ -16,8 +16,8 @@ export class JudgmentComponent implements OnInit {
 
   constructor(
     private sanitizer: DomSanitizer,
-    public judgementService: JudgementService,
-    public quizService: QuizService
+    private judgementService: JudgementService,
+    private quizService: QuizService
   ) {}
 
   ngOnInit(): void {
@@ -26,11 +26,11 @@ export class JudgmentComponent implements OnInit {
     this.answerExplanation = this.quizService.answerExplanation;
 
     this.trustUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-      this.quizService.randomQuizList[this.quizService.randomQuizCount].ansImg
+      this.quizService.answerImage
     );
   }
 
   nextQuiz() {
-    this.judgementService.nextQuiz();
+    this.quizService.nextQuiz();
   }
 }

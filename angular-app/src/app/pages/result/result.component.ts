@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { JudgementService } from '../../services/judgement.service';
-import { QuizService } from '../../services/quiz.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,11 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./result.component.scss'],
 })
 export class ResultComponent {
-  constructor(
-    public judgementService: JudgementService,
-    public QuizService: QuizService,
-    private router: Router
-  ) {}
+  constructor(private router: Router) {}
 
   //最初からクイズをスタートさせる
   restart() {
