@@ -3,7 +3,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { JudgementService } from '../../services/judgement.service';
 import { QuizService } from '../../services/quiz.service';
-import { AnsOption, Quiz } from 'src/app/types';
+import { AnsOption } from 'src/app/types';
 
 import * as _ from 'lodash';
 
