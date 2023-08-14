@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="quiz-content">
+    <p class="quiz-text">
+      問題 {{ quizCount }} :
+      {{ currentQuizText }}
+    </p>
+  </div>
+  <div class="quiz-image-content">
+    <iframe class="quiz-image-frame" [src]="trustUrl" allow="autoplay"></iframe>
+  </div>
+  <div class="selection">
+    <button
+      mat-flat-button
+      class="sl-btn"
+      *ngFor="let ansOption of randomChoice; index as i"
+      (click)="onClickAnswer(ansOption.isCorrect)"
+    >
+      {{ ansOption.label }}
+    </button>
+  </div>
+</div>

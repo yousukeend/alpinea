@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="total-result">
-    <p>総合結果は、、、７問正解</p>
+    <p>総合結果は、、、7問正解</p>
   </div>
   <div class="rank">
     <div class="rank-content">
@@ -8,5 +8,7 @@
       <p>その優れた知識とともにスキーの発展に期待され、これを賞します。</p>
     </div>
   </div>
-  <button mat-fab extended class="retry" routerLink="/">はじめに戻る</button>
+  <button mat-fab extended class="retry" (click)="restart()">
+    はじめに戻る
+  </button>
 </div>
