@@ -17,7 +17,7 @@ export class ResultComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.quizScore = this.judgementService.totalQuizScore;
+    this.quizScore = this.judgementService.quizScore;
     this.classifySkillLevel(this.quizScore);
   }
   //最初からクイズをスタートさせる
@@ -25,13 +25,13 @@ export class ResultComponent implements OnInit {
     this.router.navigateByUrl('/');
   }
 
-  //正解数に応じて階級を与える処理
+  //正解数によって階級判別をさせる
   classifySkillLevel(score: number): void {
-    if (score === 7) {
+    if (score >= 7) {
       this.userSkillLevel = 'プロ';
-    } else if (score >= 5 && score <= 6) {
+    } else if (score >= 5) {
       this.userSkillLevel = '上級者';
-    } else if (score >= 3 && score <= 4) {
+    } else if (score >= 3) {
       this.userSkillLevel = '中級者';
     } else {
       this.userSkillLevel = '初心者';
