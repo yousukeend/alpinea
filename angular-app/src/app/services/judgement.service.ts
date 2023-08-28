@@ -8,6 +8,8 @@ import * as _ from 'lodash';
 export class JudgementService {
   private _isCorrectAnswer: boolean = false;
   private _quizScore: number = 0;
+  private _userSkillLevel: string = '';
+  private _userSkillScore: number = 7;
 
   constructor() {}
 
@@ -25,6 +27,19 @@ export class JudgementService {
     }
   }
 
+  //正解数によって階級判別をさせる
+  classifySkillLevel() {
+    if (this._quizScore >= this._userSkillScore) {
+      this._userSkillLevel = 'プロ';
+    } else if (this._quizScore >= this._userSkillScore - 2) {
+      this._userSkillLevel = '上級者';
+    } else if (this._quizScore >= this._userSkillScore - 4) {
+      this._userSkillLevel = '中級者';
+    } else {
+      this._userSkillLevel = '初心者';
+    }
+  }
+
   //正誤判定の取得
   get quizCorrectAnswer(): boolean {
     return this._isCorrectAnswer;
@@ -33,5 +48,10 @@ export class JudgementService {
   //正解数の取得
   get quizScore(): number {
     return this._quizScore;
+  }
+
+  //ユーザーの階級を取得
+  get userSkill(): string {
+    return this._userSkillLevel;
   }
 }
