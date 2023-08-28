@@ -9,7 +9,6 @@ export class JudgementService {
   private _isCorrectAnswer: boolean = false;
   private _quizScore: number = 0;
   private _userSkillLevel: string = '';
-  private _userSkillScore: number = 7;
 
   constructor() {}
 
@@ -29,11 +28,11 @@ export class JudgementService {
 
   //正解数によって階級判別をさせる
   classifySkillLevel() {
-    if (this._quizScore >= this._userSkillScore) {
+    if (this._quizScore >= 7) {
       this._userSkillLevel = 'プロ';
-    } else if (this._quizScore >= this._userSkillScore - 2) {
+    } else if (this._quizScore >= 5) {
       this._userSkillLevel = '上級者';
-    } else if (this._quizScore >= this._userSkillScore - 4) {
+    } else if (this._quizScore >= 3) {
       this._userSkillLevel = '中級者';
     } else {
       this._userSkillLevel = '初心者';
