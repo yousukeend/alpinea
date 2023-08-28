@@ -5,14 +5,16 @@
   flex-direction: column;
   height: 100%;
 
-  .rule-text {
-    margin-top: 10vh;
-  }
-
   .info-text {
     font-size: 2.5vw;
     color: #707070;
-    padding:0 10vw;
+    padding: 0 10vw;
+  }
+
+  .rule-text {
+    font-size: 4vw;
+    font-weight: bold;
+    margin-top: 10vh;
   }
 
   .start-button {
