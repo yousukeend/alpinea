@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { NUMBER_OF_QUIZ } from '../const';
 
 import * as _ from 'lodash';
 
@@ -8,7 +9,6 @@ import * as _ from 'lodash';
 export class JudgementService {
   private _isCorrectAnswer: boolean = false;
   private _quizScore: number = 0;
-  private _userSkillLevel: string = '';
 
   constructor() {}
 
@@ -27,15 +27,15 @@ export class JudgementService {
   }
 
   //正解数によって階級判別をさせる
-  classifySkillLevel() {
-    if (this._quizScore >= 7) {
-      this._userSkillLevel = 'プロ';
-    } else if (this._quizScore >= 5) {
-      this._userSkillLevel = '上級者';
-    } else if (this._quizScore >= 3) {
-      this._userSkillLevel = '中級者';
+  classifySkillLevel(score: number): string {
+    if (score >= NUMBER_OF_QUIZ) {
+      return 'プロ';
+    } else if (score >= NUMBER_OF_QUIZ - 2) {
+      return '上級者';
+    } else if (score >= NUMBER_OF_QUIZ - 4) {
+      return '中級者';
     } else {
-      this._userSkillLevel = '初心者';
+      return '初心者';
     }
   }
 
@@ -50,7 +50,7 @@ export class JudgementService {
   }
 
   //ユーザーの階級を取得
-  get userSkill(): string {
-    return this._userSkillLevel;
+  get userSkillLevel(): string {
+    return this.classifySkillLevel(this._quizScore);
   }
 }

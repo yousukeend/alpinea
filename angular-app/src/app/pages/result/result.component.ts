@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { JudgementService } from 'src/app/services/judgement.service';
+import { JudgementService } from '../../services/judgement.service';
 
 @Component({
   selector: 'app-result',
@@ -18,9 +18,11 @@ export class ResultComponent implements OnInit {
 
   ngOnInit(): void {
     this.quizScore = this.judgementService.quizScore;
-    this.judgementService.classifySkillLevel();
-    this.userSkillLevel = this.judgementService.userSkill;
+    this.userSkillLevel = this.judgementService.classifySkillLevel(
+      this.quizScore
+    );
   }
+
   //最初からクイズをスタートさせる
   restart() {
     this.router.navigateByUrl('/');

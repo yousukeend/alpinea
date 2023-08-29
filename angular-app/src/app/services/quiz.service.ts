@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { QUIZ_LIST } from '../const';
+import { NUMBER_OF_QUIZ, QUIZ_LIST } from '../const';
 import { AnsOption, Quiz } from '../types';
 
 import * as _ from 'lodash';
@@ -23,14 +23,14 @@ export class QuizService {
 
   //クイズが開始時に一回だけ実行する
   startQuiz() {
-    this._randomQuizList = _.shuffle(this._quizList).slice(0, 7);
+    this._randomQuizList = _.shuffle(this._quizList).slice(0, NUMBER_OF_QUIZ);
   }
 
   //クイズの進行を管理
   nextQuiz() {
     this._randomQuizCount++;
 
-    if (this._randomQuizCount < 7) {
+    if (this._randomQuizCount < NUMBER_OF_QUIZ) {
       this.router.navigateByUrl('/quiz');
     } else {
       this.router.navigateByUrl('/result');
