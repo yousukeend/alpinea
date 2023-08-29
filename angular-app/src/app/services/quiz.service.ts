@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class QuizService {
   private randomQuizList: Quiz[] = [];
   private randomQuizCount: number = 0;
+  private maxQuizCount: number = 7;
   private quizList = QUIZ_LIST;
 
   constructor(private router: Router) {}
@@ -23,14 +24,14 @@ export class QuizService {
 
   //クイズが開始時に一回だけ実行する
   startQuiz() {
-    this.randomQuizList = _.shuffle(this.quizList).slice(0, 7);
+    this.randomQuizList = _.shuffle(this.quizList).slice(0, this.maxQuizCount);
   }
 
   //クイズの進行を管理
   nextQuiz() {
     this.randomQuizCount++;
 
-    if (this.randomQuizCount < 7) {
+    if (this.randomQuizCount < this.maxQuizCount) {
       this.router.navigateByUrl('/quiz');
     } else {
       this.router.navigateByUrl('/result');
