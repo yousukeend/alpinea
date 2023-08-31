@@ -18,9 +18,7 @@ export class ResultComponent implements OnInit {
 
   ngOnInit(): void {
     this.quizScore = this.judgementService.quizScore;
-    this.userSkillLevel = this.judgementService.classifySkillLevel(
-      this.quizScore
-    );
+    this.userSkillLevel = this.judgementService.userSkillLevel;
   }
 
   //最初からクイズをスタートさせる
