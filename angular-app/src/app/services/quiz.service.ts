@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
-import { QUIZ_LIST } from '../const';
-import { AnsOption, Quiz } from '../types';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { AnsOption } from '../types';
 
 import * as _ from 'lodash';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class QuizService {
-  private randomQuizList: Quiz[] = [];
+  private randomQuizList: any[] = [];
   private randomQuizCount: number = 0;
-  private quizList = QUIZ_LIST;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   //出題する配列の初期化
   initQuiz() {
@@ -23,7 +22,9 @@ export class QuizService {
 
   //クイズが開始時に一回だけ実行する
   startQuiz() {
-    this.randomQuizList = _.shuffle(this.quizList).slice(0, 7);
+    this.http.get('../assets/const.json').subscribe((quizData: any) => {
+      this.randomQuizList = _.shuffle(quizData).slice(0, 7);
+    });
   }
 
   //クイズの進行を管理
