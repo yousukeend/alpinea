@@ -1,4 +1,6 @@
 .top-container {
+  background-image: url("../../images/mountain.png");
+  background-size: 800px;
   display: flex;
   background-color: #eaf5f8;
   align-content: center;
@@ -21,8 +23,8 @@
   }
 
   .start-button {
-    color: #707070;
-    background-color: #a6d7ed;
+    color: #fff;
+    font-weight: bold;
     display: flex;
     width: 15vw;
     margin: 0 auto;
@@ -31,7 +33,7 @@
   }
 
   @media (max-width: 600px) {
-    .start-button{
+    .start-button {
       width: 200px;
     }
   }
