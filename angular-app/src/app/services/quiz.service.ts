@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { QUIZ_LIST } from '../const';
+import { NUMBER_OF_QUIZ, QUIZ_LIST } from '../const';
 import { AnsOption, Quiz } from '../types';
 
 import * as _ from 'lodash';
@@ -9,28 +9,28 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class QuizService {
-  private randomQuizList: Quiz[] = [];
-  private randomQuizCount: number = 0;
-  private quizList = QUIZ_LIST;
+  private _randomQuizList: Quiz[] = [];
+  private _randomQuizCount: number = 0;
+  private _quizList = QUIZ_LIST;
 
   constructor(private router: Router) {}
 
   //出題する配列の初期化
   initQuiz() {
-    this.randomQuizList = [];
-    this.randomQuizCount = 0;
+    this._randomQuizList = [];
+    this._randomQuizCount = 0;
   }
 
   //クイズが開始時に一回だけ実行する
   startQuiz() {
-    this.randomQuizList = _.shuffle(this.quizList).slice(0, 7);
+    this._randomQuizList = _.shuffle(this._quizList).slice(0, NUMBER_OF_QUIZ);
   }
 
   //クイズの進行を管理
   nextQuiz() {
-    this.randomQuizCount++;
+    this._randomQuizCount++;
 
-    if (this.randomQuizCount < 7) {
+    if (this._randomQuizCount < NUMBER_OF_QUIZ) {
       this.router.navigateByUrl('/quiz');
     } else {
       this.router.navigateByUrl('/result');
@@ -39,36 +39,36 @@ export class QuizService {
 
   //問題番号を取得
   get quizCount(): number {
-    return this.randomQuizCount;
+    return this._randomQuizCount;
   }
 
   //問題文の取得
   get currentQuizText(): string {
-    return this.randomQuizList[this.randomQuizCount].quizText;
+    return this._randomQuizList[this._randomQuizCount].quizText;
   }
 
   //問題の画像または動画の取得
   get currentQuizImg(): string {
-    return this.randomQuizList[this.randomQuizCount].quizImg;
+    return this._randomQuizList[this._randomQuizCount].quizImg;
   }
 
   //問題の選択肢の取得
   get currentAnsOptions(): AnsOption[] {
-    return this.randomQuizList[this.randomQuizCount].ansOptions;
+    return this._randomQuizList[this._randomQuizCount].ansOptions;
   }
 
   //正解の単語の取得
   get answerWord(): string {
-    return this.randomQuizList[this.randomQuizCount].ansWord;
+    return this._randomQuizList[this._randomQuizCount].ansWord;
   }
 
   //正解の説明文の取得
   get answerExplanation(): string {
-    return this.randomQuizList[this.randomQuizCount].ansExp;
+    return this._randomQuizList[this._randomQuizCount].ansExp;
   }
 
   //正解の画像の取得
   get answerImage(): string {
-    return this.randomQuizList[this.randomQuizCount].ansImg;
+    return this._randomQuizList[this._randomQuizCount].ansImg;
   }
 }

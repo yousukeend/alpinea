@@ -1,5 +1,5 @@
 import { Quiz } from './types';
-
+export const NUMBER_OF_QUIZ: number = 7;
 export const QUIZ_LIST: Quiz[] = [
   {
     quizText: '後ろに見える山は何でしょう?',
