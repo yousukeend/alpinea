@@ -23,7 +23,7 @@ export class QuizService {
 
   //クイズが開始時に一回だけ実行する
   startQuiz() {
-    this.http.get('../assets/quizData.json').subscribe((quizData: any) => {
+    this.http.get<Quiz[]>('../assets/quizData.json').subscribe((quizData) => {
       this._randomQuizList = _.shuffle(quizData).slice(0, NUMBER_OF_QUIZ);
     });
   }
